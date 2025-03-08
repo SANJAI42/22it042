@@ -1,0 +1,19 @@
+name: docker-pipeline-sanjai
+on: push
+jobs:
+  docker-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print your register number
+        run: echo "Hello World - 22it042"
+        
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker Build
+        run: docker build -t sanjai42/ml-model-22it042 .
+
+      - name: Docker Images
+        run: docker images
+        
+    
